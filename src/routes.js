@@ -6,7 +6,7 @@ const database = new Database(); //criamos um obj database
 export const routes = [
   {
     method: 'GET', //metodo
-    path: '/tasks', //caminho
+    path: buildRoutePath('/tasks'), //caminho
     handler: (req, res) => {
       const tasks = database.select('tasks');
       return res.end(JSON.stringify(tasks)); //retornamos a lista tasks como string pois nao eh aceito array
@@ -14,7 +14,7 @@ export const routes = [
   },
   {
     method: 'POST', //metodo
-    path: '/tasks', //caminho
+    path: buildRoutePath('/tasks'), //caminho
     handler: (req, res) => {
       const { title, description } = req.body;
       const task = {
@@ -31,5 +31,10 @@ export const routes = [
 
       return res.writeHead(201).end();
     }, //oque vai acontecert quando esta rota for chamada
+  },
+  {
+    method: 'DELETE',
+    path: buildRoutePath('/tasks/:id'),
+    handler: (req, res) => {},
   },
 ];
