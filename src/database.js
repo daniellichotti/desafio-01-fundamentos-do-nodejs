@@ -73,4 +73,22 @@ export class Database {
       this.#persist();
     }
   }
+  patch(table, id) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+
+    if (rowIndex > -1) {
+      //const completed_at = new Date();
+
+      this.#database[table][rowIndex] = {
+        id,
+        created_at: this.#database[table][rowIndex]['created_at'],
+        title: this.#database[table][rowIndex]['title'],
+        description: this.#database[table][rowIndex]['description'],
+        completed_at: new Date(),
+        updated_at: this.#database[table][rowIndex]['updated_at'],
+      };
+
+      this.#persist();
+    }
+  }
 }
