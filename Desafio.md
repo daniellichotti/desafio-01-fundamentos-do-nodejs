@@ -73,18 +73,3 @@ Algumas sugestões do que pode ser implementado:
 
 - Validar se as propriedades `title` e `description` das rotas `POST` e `PUT` estão presentes no `body` da requisição.
 - Nas rotas que recebem o `/:id`, além de validar se o `id` existe no banco de dados, retornar a requisição com uma mensagem informando que o registro não existe.
-
-## Entrega
-
-Após concluir o desafio, você deve enviar a URL do seu código no GitHub para a plataforma. 
-
-Além disso, que tal fazer um post no LinkedIn compartilhando o seu aprendizado e contando como foi a experiência?
-É uma excelente forma de demonstrar seus conhecimentos e atrair novas oportunidades!
-
-Feito com 💜 por Rocketseat 👋
-
-## Repositório de consulta
-
-Antes de acessar o repositório com o desafio concluído, recomendamos fortemente que tente realizar o desafio.
-
-Caso tenha dúvidas/dificuldades técnicas, temos o fórum para te ajudar.
